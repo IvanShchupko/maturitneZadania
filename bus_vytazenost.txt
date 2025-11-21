@@ -1,0 +1,9 @@
+50
+20 0 �t�rovo n�m.
+35 0 Mestsk� park
+10 20 Dargovsk�
+40 20 Nemocnica
+10 40 Bratsk�
+5 10 Mestsk� �rad
+35 10 Partiz�nska
+0 55 Bernol�kova
