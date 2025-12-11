@@ -94,3 +94,4 @@ button1.pack()
 canvas.bind_all('<Key>', klaves)
 
 canvas.mainloop()
+
