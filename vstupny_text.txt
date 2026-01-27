@@ -1,0 +1,56 @@
+CIA dok�zala sledova� polohu osoby. V�aka Wi-Fi sie�am
+Jednoduch� a pritom nen�padn� technika umo�nila pracovn�kom CIA sledovanie cie�ov�ch os�b. 
+Organiz�cia WikiLeaks zverejnila �al�iu �as� materi�lov informuj�cich o hackersk�ch n�strojoch vyu��van�ch
+na presadzovanie pr�va. Tentoraz ide o malv�r, ktor� sleduje zemepisn� polohu cie�ovej osoby prostredn�ctvom 
+Wi-Fi modulu.
+
+Okolit� siete prezradia polohu
+
+Americk� �stredn� spravodajsk� slu�ba (CIA) vyu��vala pod�a uniknut�ch inform�ci� od roku 2012 n�stroj ozna�en�
+ako �Elsa�. Sl��il na presn� lokaliz�ciu osoby, respekt�ve po��ta�a v priestore, pri�om k tomu vyu��val
+datab�zy Wi-Fi siet�, ktor� vytvorili spolo�nosti Google a Microsoft.
+Lokaliza�n� n�stroj samozrejme funguje iba na zariadeniach obsahuj�cich Wi-Fi modul a je ur�en� pre opera�n�
+syst�m Windows. Cie�ov� osoba nemus� by� pripojen� k �iadnej bezdr�tovej sieti, ke�e sa presn� poloha vypo��ta
+iba na z�klade sily sign�lu okolit�ch Wi-Fi siet�. Z�skan� d�ta sa n�sledne porovnaj� s datab�zou siet�
+z Google, pr�padne Microsoftu. V�sledkom je presn� poloha zariadenia.
+
+Pozn�mka redakcie: Toto�n� sp�sob lokaliz�cie vyu��va Apple a Google pri ur�ovan� polohy smartf�nu v pr�pade,
+ak nie je dostupn� GPS lokaliz�cia.
+
+Malv�r sa d� detailne nastavi�
+Pracovn�ci CIA najprv vytvoria prostredn�ctvom �pecializovan�ho softv�ru malv�r na mieru pre cie�ov� osobu.
+M��u zvoli� druh architekt�ry zariadenia (x86, x64), typ infikovanej kni�nice (dllhost, svchost, rundll32,
+ appinit) �i po�adovan� zdroj geoloka�n�ch d�t (Google, Microsoft).
+V�sledn� malv�r je nutn� nejak�m sp�sobom nain�talova� do cie�ov�ho po��ta�a.
+Uniknut� dokumenty s�ce nepopisuj� techniku infiltr�cie, no je pravdepodobn�, �e k tomu sl��i niektor�
+z mnoh�ch �al��ch hackersk�ch n�strojov.
+
+Po infikovan� za�ne malv�r zhroma��ova� inform�cie o okolit�ch Wi-Fi sie�ach na z�klade vopred definovan�ho
+�asov�ho harmonogramu. Konkr�tne sa zbieraj� takzvan� ESS d�ta, ktor� obsahuj� MAC adresu pr�stupov�ho
+bodu (BSSID), jeho n�zov (SSID) a silu sign�lu (RSSI).
+
+�ifrovan� d�ta putuj� do CIA
+
+K z�skan�m �dajom je nesk�r pripojen� poloha ka�d�ho pr�stupov�ho bodu a v�sledn� d�ta s� za�ifrovan�
+128-bitov�m AES k���om. Po pripojen� zariadenia k internetu sa za�ifrovan� s�bor odo�le na riadiaci server,
+kde s n�m m��u pracovn�ci CIA �alej pracova� a zisti� napr�klad n�vyky sledovanej osoby.
+Ke�e sa datab�zy Wi-Fi siet�, ktor� spravuje Microsoft a Google postupom �asu zdokona�uj�, je zrejm�,
+�e aj CIA dok�e z�ska� ove�a presnej�ie inform�cie o pohybe cie�ov�ch os�b. Verejn� pr�stup k datab�zam
+nie je mo�n� a je ur�en� len pre v�voj�rov aplik�ci� vo forme �pecifick�ho API rozhrania.
+Pre verejnos� s� k dispoz�cii open-source projekty, napr�klad Wigle.
+
+Tajn� slu�by pri�li o mnoho n�strojov
+
+Pripome�me, �e WikiLeaks zverejnila za�iatkom marca prv� �as� inform�ci� o hackersk�ch n�strojoch,
+ktor� �dajne vyu��va americk� CIA. Zbierka materi�lov dostala ozna�enie �Vault 7�.
+Pod�a odhalen� disponuj� jej pracovn�ci �irok�m spektrom r�znych hackersk�ch n�strojov.
+V�aka nim dok�u prevzia� kontrolu nad �ubovo�n�m opera�n�m syst�mom (Windows, Linux �i macOS),
+ovl�dnu� smartf�n so syst�mom iOS a Android �i hackn�� inteligentn� telev�zory.
+
+Probl�my sa nevyhli ani Americkej bezpe�nostnej agent�re NSA, na ktor� si pre zmenu posvietili hackeri
+zo skupiny The Shadow Brokers. Na Ve�k� piatok toti� zverejnili p�sobiv� zbierku �to�n�ch modulov,
+ktor� sl��ia na prevzatie �plnej kontroly nad cie�ov�m po��ta�om �i na vytvorenie zadn�ch vr�tok.
+
+Pr�ve tieto n�stroje sa stali hnac�m motorom legend�rneho ransomv�ru WannaCry a nov�ho
+de�truk�n�ho v�rusu ExPetr.
+zdroj: http://www.zive.sk/clanok/126154/cia-dokazala-sledovat-polohu-osoby-vdaka-wi-fi-sietam
