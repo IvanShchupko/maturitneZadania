@@ -17,26 +17,34 @@ for y in range(v):
     linia = []
     for i in range(len(riadok)):
         if i % 2 == 0:
-            for i in range(int(riadok[i])):
+            for k in range(int(riadok[i])):
                 linia.append(0)
         else:
-            for i in range(int(riadok[i])):
+            for k in range(int(riadok[i])):
                 linia.append(1)
     obrazok.append(linia)
 
+vstup.close()
+
 def kresli(biely, cierny):
+    c.delete("all")
     for y in range(v):
         for x in range(s):
             if obrazok[y][x] == 1:
                 bod(x,y,biely)
             else:
                 bod(x,y,cierny)
-        c.update()
+    c.update()
+
+white = "white"
+black = "black"
 
 def negativ():
-    kresli("black", "white")
+    global black, white
+    black, white = white, black
+    kresli(white, black)
 
-kresli("white", "black")
+kresli(white, black)
 
 b = tk.Button(text="Negativ", command=negativ)
 b.pack()
