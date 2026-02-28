@@ -22,14 +22,8 @@ maxSpokojnych = [0,25]
 maxNespokojnych = [0,25]
 
 for hodina in pracovneHodiny:
-    spokojne = 0
-    nespokojne = 0
-    for hlas in spok:
-        if hlas[0] == hodina:
-            if hlas[1] == "nie":
-                nespokojne += 1
-            else:
-                spokojne += 1
+    spokojne = spok.count([hodina, "áno"])
+    nespokojne = spok.count([hodina, "nie"])
 
     spokojnost = spokojne / (spokojne + nespokojne)
 
