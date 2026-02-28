@@ -2,10 +2,8 @@ info = open("spokojnost_1.txt", "r")
 
 spok = []
 pracovneHodiny = []
-celkovyPocetVyjadreni = 0
 
 for line in info:
-    celkovyPocetVyjadreni += 1
     spok.append(line.strip().split())
     spok[-1][0] = spok[-1][0][:2]
     if spok[-1][0][0] == '0':
@@ -17,7 +15,7 @@ for line in info:
 
 pracovneHodiny = sorted(pracovneHodiny)
 
-print("Celkový počet vyjadrení je " + str(celkovyPocetVyjadreni))
+print("Celkový počet vyjadrení je " + str(len(spok)))
 maxSpokojnych = [0,25]
 maxNespokojnych = [0,25]
 
